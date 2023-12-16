@@ -1,1 +1,7 @@
-<p>crime-list works!</p>
+<div class="crime-list">
+    @for (crime of crimes; track crime.id) {
+        <crm-crime-item [color]="crime.color" [name]="crime.name"> </crm-crime-item>
+      } @empty {
+        Empty list of users
+      }
+</div>
