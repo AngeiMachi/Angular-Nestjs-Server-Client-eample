@@ -1,13 +1,12 @@
-import { createSelector } from '@ngrx/store';
+import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { Crimes } from "../../models/models";
 
 export interface CrimesState {
-  crimes: Crimes[]
+  crimeList: Crimes[]
 }
 
-export const selectCrimesState = (state: CrimesState) => state;
-export const selectCrimes = createSelector(
-    selectCrimesState,
-    (state: CrimesState) => state.crimes 
-  );
-
+export const selectCrimesState = createFeatureSelector<CrimesState>('crimes');
+export const selectCrimesList = createSelector(
+  selectCrimesState,
+  (state: CrimesState) => state.crimeList 
+);

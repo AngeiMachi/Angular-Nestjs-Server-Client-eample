@@ -8,11 +8,11 @@ import { Crimes } from '../models/models';
 })
 export class CrimesService {
 
-  host = 'http://localhost:3000/api';
+  host = 'http://localhost:3000';
  
   constructor(private http: HttpClient) {}
   getCrimes():Observable<Crimes[]> {
-    return this.http.get<Crimes[]>(`${this.host}/crimes`).pipe(map((res) => res));
+    return this.http.get<Crimes[]>(`${this.host}/crimes/getCrimes`).pipe(map((res) => res));
   }
   addCrimes(todo: string) {
     return this.http.post(`${this.host}/crimes`, {

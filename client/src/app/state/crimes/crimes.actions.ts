@@ -1,4 +1,4 @@
-import { Action, createAction, props } from "@ngrx/store";
+import { createAction, props } from "@ngrx/store";
 import { Crimes } from "../../models/models";
 
 export const LoadCrimes  = createAction('[Crimes] Load Crimes');

@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { EMPTY, of } from 'rxjs';
 import { map, mergeMap, catchError } from 'rxjs/operators';
 import { CrimesService } from '../../services/crimes.service';
 import { LoadCrimes, LoadCrimesFailure, LoadCrimesSuccess } from './crimes.actions';
+import { of } from 'rxjs';
 
 @Injectable()
-export class CatalogEffect {
+export class CrimesEffect {
 
-  loadArticles$ = createEffect(() => this.actions$.pipe(
+  loadCrimes$ = createEffect(() => this.actions$.pipe(
       ofType(LoadCrimes),
       mergeMap(() => this.crimesService.getCrimes()
         .pipe(
-          map(crimes => (LoadCrimesSuccess({result: crimes}))),
+          map(crimes => {
+            return (LoadCrimesSuccess({result: crimes}))
+          }),
           catchError((error) => of(LoadCrimesFailure()))
         ))
     )

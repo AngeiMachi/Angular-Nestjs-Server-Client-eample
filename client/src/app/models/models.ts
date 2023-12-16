@@ -3,6 +3,6 @@ export interface Crimes {
     color:string;
     name:string;
     createDate:Date;
-    LastUpdate:Date;
-    CreatedBy:string;
+    lastUpdate:Date;
+    createdBy:string;
 }

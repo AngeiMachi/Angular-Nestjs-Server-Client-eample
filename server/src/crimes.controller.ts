@@ -10,7 +10,7 @@ import { Crimes } from './models';
 export class CrimesController {
     constructor(private readonly crimesService: CrimesService) {}
     
-    @Get()
+    @Get('getCrimes')
     getTodos(): Crimes[] {
         try {
             return this.crimesService.getCrimes();
