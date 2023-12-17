@@ -11,6 +11,7 @@
  On the server side, the project uses Nest.js for backend and reads/writes from/to crimes.json file as database.<br />
  There is use of Ngrx store library for read/write operations and state management.<br />
  The project assumes current user as 'admin' for crime creations.<br />
+ Due to time limitaion the focus is less on pixel-perfecing and more on funcionality. <br/>
 
 
 # build/execute instructions:
