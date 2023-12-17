@@ -78,6 +78,7 @@ export class CrimeEditorComponent implements OnInit,OnChanges{
           lastUpdate: new Date(),
           createdBy: 'admin',
       }
+      
         this.store.dispatch(createCrime({crime}));
       }
       
@@ -95,6 +96,9 @@ export class CrimeEditorComponent implements OnInit,OnChanges{
       control?.markAsUntouched();
       control?.clearValidators();
     });
+    this.crime=null;
+    this.isEditMode = false;
+    this.color='black';
     this.close.emit();
     this.sideNav?.close();
   }

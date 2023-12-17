@@ -11,3 +11,11 @@
  On the server side, the project uses Nest.js for backend and reads/writes from/to crimes.json file as database.<br />
  There is use of Ngrx store library for read/write operations and state management.<br />
  The project assumes current user as 'admin' for crime creations.<br />
+
+
+# build/execute instructions:
+git clone git@github.com:AngeiMachi/Angular-Nestjs-Server-Client-eample.git
+If Nest.js not installed on machine :  npm i -g @nestjs/cli
+cd client => npm install => npm run start
+cd server => nmp install => npm run start
+
