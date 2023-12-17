@@ -1,7 +1,7 @@
 # Status of work:
  ✓ The list of items should be retrieved from a JSON file using an HTTP service.<br />
  ✓ The user should be able to create a new item to the list by filling out a form and submitting it.<br />
- ✓ The user should be able to edit an existing item in the list by clicking on it and filling out a form to   update the items details.
+ ✓ The user should be able to edit an existing item in the list by clicking on it and filling out a form to update the items details.<br />
  ✓ Implement tile view and switching.<br />
  ✓ The user should be able to filter the list of items by typing in the search field.<br />
  ✓ The app should have pagination and allow to adjust the page size.<br />
