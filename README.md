@@ -14,8 +14,8 @@
 
 
 # build/execute instructions:
-git clone git@github.com:AngeiMachi/Angular-Nestjs-Server-Client-eample.git
-If Nest.js not installed on machine :  npm i -g @nestjs/cli
-cd client => npm install => npm run start
-cd server => nmp install => npm run start
+git clone git@github.com:AngeiMachi/Angular-Nestjs-Server-Client-eample.git.<br />
+If Nest.js not installed on machine :  npm i -g @nestjs/cli.<br />
+cd client => npm install => npm run start.<br />
+cd server => nmp install => npm run start.<br />
 
