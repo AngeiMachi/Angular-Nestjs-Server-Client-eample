@@ -1,5 +1,10 @@
 <div class="crime-editor">
-    <h1>Create New</h1>
+    @if (isEditMode) {
+        <h1>Edit {{crime?.name}}</h1>
+    } @else {
+        <h1>Create New</h1>
+    }
+    
     <form class="crime-editor_form" [formGroup]="crimeForm" (ngSubmit)="onSubmit()">
         <div class="crime-editor_form_full-width">
             <mat-form-field class="crime-editor_form_full-width_name" >

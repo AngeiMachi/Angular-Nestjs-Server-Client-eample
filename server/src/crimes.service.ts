@@ -25,15 +25,25 @@ export class CrimesService {
                       createdBy:crime.createdBy
                     };
       this.crimes = [...this.crimes, { ...newCrime}];
-      const dataToWrite = this.crimes.map(crime => JSON.stringify(crime)).join('\n');
+      const dataToWrite = '['+this.crimes.map(crime => JSON.stringify(crime)).join('\n,')+']';
 
       fs.writeFileSync('./src/crimes.json', dataToWrite);
       return crime;
     }
-    deleteCrime(id: number): Crime[] {
-      const index = this.crimes.findIndex((task) => task.id === id);
-      this.crimes.splice(index, 1);
-      return this.crimes;
+    updateCrime(crime:Crime): Crime {
+      const updatedCrime = { id: crime.id, 
+                      name:crime.name,
+                      desciprtion:crime.desciprtion,
+                      color:crime.color,
+                      createDate:crime.createDate,
+                      lastUpdate:new Date(),
+                      createdBy:crime.createdBy
+                    };
+      const index =this.crimes.findIndex(crime => crime.id === updatedCrime.id);
+      this.crimes[index]=updatedCrime;
+      const dataToWrite = '['+this.crimes.map(crime => JSON.stringify(crime)).join('\n,')+']';
+      fs.writeFileSync('./src/crimes.json', dataToWrite);
+      return crime;
     }
     
  }

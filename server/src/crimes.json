@@ -1,25 +1,30 @@
-{"id":"1","color":"red","name":"Car accident","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Ori Lugasi"}
-{"id":"2","color":"black","name":"Human trafficing for prostituion","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Ran Shim"}
-{"id":"3","color":"blue","name":"Murder","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Or Bar"}
-{"id":"4","color":"purple","name":"Suspect","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Natanel Malca"}
-{"id":"5","color":"yellow","name":"Terrorist","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Mati Shwartz"}
-{"id":"6","color":"green","name":"Terrorist attact","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Chen Meir"}
-{"id":"7","color":"red","name":"Suspect","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Natanel Malca"}
-{"id":"8","color":"green","name":"Car accident","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Ori Lugasi"}
-{"id":"9","color":"purple","name":"Murder","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Mati Shwartz"}
-{"id":"10","color":"blue","name":"Car accident","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Or Bar"}
-{"id":"11","color":"purple","name":"Suspect","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Ori Lugasi"}
-{"id":"12","color":"green","name":"Car accident","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Natanel Malca"}
-{"id":"13","color":"red","name":"Murder","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Chen Meir"}
-{"id":"14","color":"green","name":"Car accident","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Or Bar"}
-{"id":"15","color":"yellow","name":"Terrorist attact","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Mati Shwartz"}
-{"id":"16","color":"blue","name":"Human trafficing for prostituion","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Ran Shim"}
-{"id":17,"name":"asdasdsadsad","desciprtion":null,"color":"black","createDate":"2023-12-16T22:56:27.713Z","lastUpdate":"2023-12-16T22:56:27.713Z","createdBy":"admin"}
-{"id":18,"name":"asdasdasd","desciprtion":"","color":"black","createDate":"2023-12-16T23:09:38.967Z","lastUpdate":"2023-12-16T23:09:38.967Z","createdBy":"admin"}
-{"id":19,"name":"asdasd","desciprtion":"asdasddsadsad","color":"black","createDate":"2023-12-16T23:10:56.922Z","lastUpdate":"2023-12-16T23:10:56.922Z","createdBy":"admin"}
-{"id":20,"name":null,"desciprtion":null,"color":"black","createDate":"2023-12-16T23:28:44.921Z","lastUpdate":"2023-12-16T23:28:44.921Z","createdBy":"admin"}
-{"id":21,"name":null,"desciprtion":null,"color":"black","createDate":"2023-12-16T23:28:58.248Z","lastUpdate":"2023-12-16T23:28:58.248Z","createdBy":"admin"}
-{"id":22,"name":null,"desciprtion":null,"color":"black","createDate":"2023-12-16T23:29:00.681Z","lastUpdate":"2023-12-16T23:29:00.681Z","createdBy":"admin"}
-{"id":23,"name":null,"desciprtion":null,"color":"black","createDate":"2023-12-16T23:39:55.503Z","lastUpdate":"2023-12-16T23:39:55.503Z","createdBy":"admin"}
-{"id":24,"name":"asd","desciprtion":"asd","color":"black","createDate":"2023-12-16T23:39:59.630Z","lastUpdate":"2023-12-16T23:39:59.630Z","createdBy":"admin"}
-{"id":25,"name":"sd","desciprtion":"asdasd","color":"black","createDate":"2023-12-16T23:39:59.796Z","lastUpdate":"2023-12-16T23:39:59.796Z","createdBy":"admin"}
+[{"id":"1","color":"red","name":"Car accident","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Ori Lugasi"}
+,{"id":"2","color":"black","name":"Human trafficing for prostituion","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Ran Shim"}
+,{"id":"3","name":"Murder","desciprtion":"hi","color":"blue","createDate":"03/02/2021","lastUpdate":"2023-12-17T03:05:49.311Z","createdBy":"admin"}
+,{"id":"4","name":"Suspect","desciprtion":"this suspect escaped","color":"purple","createDate":"03/02/2021","lastUpdate":"2023-12-17T03:06:05.667Z","createdBy":"admin"}
+,{"id":"5","color":"yellow","name":"Terrorist","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Mati Shwartz"}
+,{"id":"6","color":"green","name":"Terrorist attact","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Chen Meir"}
+,{"id":"7","name":"Suspect","color":"#1929a9","createDate":"03/02/2021","lastUpdate":"2023-12-17T03:06:31.760Z","createdBy":"admin"}
+,{"id":"8","color":"green","name":"Car accident","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Ori Lugasi"}
+,{"id":"9","color":"purple","name":"Murder","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Mati Shwartz"}
+,{"id":"10","color":"blue","name":"Car accident","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Or Bar"}
+,{"id":"11","color":"purple","name":"Suspect","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Ori Lugasi"}
+,{"id":"12","color":"green","name":"Car accident","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Natanel Malca"}
+,{"id":"13","color":"red","name":"Murder","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Chen Meir"}
+,{"id":"14","color":"green","name":"Car accident","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Or Bar"}
+,{"id":"15","color":"yellow","name":"Terrorist attact","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Mati Shwartz"}
+,{"id":"16","color":"blue","name":"Human trafficing for prostituion","createDate":"03/02/2021","lastUpdate":"03/02/2021","createdBy":"Ran Shim"}
+,{"id":17,"name":"asdasdsadsad","desciprtion":null,"color":"black","createDate":"2023-12-16T22:56:27.713Z","lastUpdate":"2023-12-16T22:56:27.713Z","createdBy":"admin"}
+,{"id":18,"name":"asdasdasd","desciprtion":"","color":"black","createDate":"2023-12-16T23:09:38.967Z","lastUpdate":"2023-12-16T23:09:38.967Z","createdBy":"admin"}
+,{"id":19,"name":"asdasd","desciprtion":"asdasddsadsad","color":"black","createDate":"2023-12-16T23:10:56.922Z","lastUpdate":"2023-12-16T23:10:56.922Z","createdBy":"admin"}
+,{"id":20,"name":null,"desciprtion":null,"color":"black","createDate":"2023-12-16T23:28:44.921Z","lastUpdate":"2023-12-16T23:28:44.921Z","createdBy":"admin"}
+,{"id":21,"name":null,"desciprtion":null,"color":"black","createDate":"2023-12-16T23:28:58.248Z","lastUpdate":"2023-12-16T23:28:58.248Z","createdBy":"admin"}
+,{"id":22,"name":null,"desciprtion":null,"color":"black","createDate":"2023-12-16T23:29:00.681Z","lastUpdate":"2023-12-16T23:29:00.681Z","createdBy":"admin"}
+,{"id":23,"name":null,"desciprtion":null,"color":"black","createDate":"2023-12-16T23:39:55.503Z","lastUpdate":"2023-12-16T23:39:55.503Z","createdBy":"admin"}
+,{"id":24,"name":"asd","desciprtion":"asd","color":"black","createDate":"2023-12-16T23:39:59.630Z","lastUpdate":"2023-12-16T23:39:59.630Z","createdBy":"admin"}
+,{"id":25,"name":"sd","desciprtion":"asdasd","color":"black","createDate":"2023-12-16T23:39:59.796Z","lastUpdate":"2023-12-16T23:39:59.796Z","createdBy":"admin"}
+,{"id":26,"name":"hello","desciprtion":"horrible crime","color":"#ef0e0e","createDate":"2023-12-17T00:15:58.488Z","lastUpdate":"2023-12-17T00:15:58.488Z","createdBy":"admin"}
+,{"id":27,"name":"new crime","desciprtion":"rape","color":"black","createDate":"2023-12-17T01:04:19.903Z","lastUpdate":"2023-12-17T01:04:19.903Z","createdBy":"admin"}
+,{"id":28,"name":"adasd","desciprtion":"asdadasd","color":"black","createDate":"2023-12-17T01:06:21.277Z","lastUpdate":"2023-12-17T01:06:21.277Z","createdBy":"admin"}
+,{"id":29,"name":"hello","desciprtion":"asdasd","color":"black","createDate":"2023-12-17T01:46:41.000Z","lastUpdate":"2023-12-17T01:46:41.000Z","createdBy":"admin"}
+,{"id":30,"name":"Murder","desciprtion":"very bad","color":"#7576b1","createDate":"2023-12-17T02:24:36.700Z","lastUpdate":"2023-12-17T02:24:36.700Z","createdBy":"admin"}]

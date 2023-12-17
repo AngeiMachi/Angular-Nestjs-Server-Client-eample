@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild } from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { Crime } from '../../models/models';
@@ -15,7 +15,7 @@ export class CrimeTableComponent implements AfterViewInit,OnChanges{
   @Input() crimes:Crime[] | null=[];
   displayedColumns: string[] = ['color','name', 'createDate', 'lastUpdate', 'createdBy'];
   dataSource = new MatTableDataSource<Crime>(this.crimes as Crime[]);
-
+  @Output() rowClick= new EventEmitter<Crime>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngAfterViewInit() {

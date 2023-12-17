@@ -4,5 +4,5 @@ export declare class CrimesService {
     constructor();
     getCrimes(): Crime[];
     createCrime(crime: Crime): Crime;
-    deleteCrime(id: number): Crime[];
+    updateCrime(crime: Crime): Crime;
 }

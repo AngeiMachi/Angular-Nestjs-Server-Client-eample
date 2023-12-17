@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { CrimesState } from './crimes.selector';
-import { createCrimeSuccess, loadCrimesSuccess } from './crimes.actions';
+import { createCrimeSuccess, editCrimeSuccess, loadCrimesSuccess } from './crimes.actions';
 import { Crime } from '../../models/models';
 
 export const crimesState: CrimesState = {
@@ -18,6 +18,15 @@ export const crimesReducer = createReducer(
   on(createCrimeSuccess, (state, { crime }) => ({
     ...state,
     crimeList: [...state.crimeList, crime]
-  }))
+  })),
+  on(editCrimeSuccess, (state, { updatedCrime }) => ({
+    ...state,
+    crimeList: state.crimeList.map(crime => 
+      crime.id === updatedCrime.id ? updatedCrime : crime
+    )
+  })),
+  
+
+
   
 );

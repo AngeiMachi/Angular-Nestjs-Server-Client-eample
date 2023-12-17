@@ -5,4 +5,5 @@ export declare class CrimesController {
     constructor(crimesService: CrimesService);
     getCrimes(): Crime[];
     createCrime(crime: Crime): Crime;
+    updateCrime(crime: Crime): Crime;
 }

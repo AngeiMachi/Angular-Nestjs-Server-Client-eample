@@ -35,6 +35,14 @@ let CrimesController = class CrimesController {
             throw new common_1.HttpException(error.message, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    updateCrime(crime) {
+        try {
+            return this.crimesService.updateCrime(crime);
+        }
+        catch (error) {
+            throw new common_1.HttpException(error.message, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 };
 exports.CrimesController = CrimesController;
 __decorate([
@@ -50,6 +58,13 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Object)
 ], CrimesController.prototype, "createCrime", null);
+__decorate([
+    (0, common_1.Post)('updateCrime'),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Object)
+], CrimesController.prototype, "updateCrime", null);
 exports.CrimesController = CrimesController = __decorate([
     (0, common_1.Controller)('crimes'),
     __metadata("design:paramtypes", [crimes_service_1.CrimesService])

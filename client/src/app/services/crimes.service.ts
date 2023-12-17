@@ -20,4 +20,7 @@ export class CrimesService {
   deleteCrimes(id: number) {
     return this.http.delete(`${this.host}/crimes/${id}`);
   }
+  updateCrime(crime: Crime) {
+    return this.http.post(`${this.host}/crimes/updateCrime`, crime);
+  }
 }

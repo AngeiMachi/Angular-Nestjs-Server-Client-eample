@@ -26,4 +26,12 @@ export class CrimesController {
             throw new HttpException(error.message, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    @Post('updateCrime')
+    updateCrime(@Body()  crime : Crime): Crime {
+        try {
+            return this.crimesService.updateCrime(crime);
+        } catch (error) {
+            throw new HttpException(error.message, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }
