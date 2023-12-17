@@ -19,12 +19,19 @@ let CrimesService = class CrimesService {
     getCrimes() {
         return this.crimes;
     }
-    createCrime(name, color) {
-        const crime = { id: this.crimes.length + 1, name, color,
-            createDate: new Date(), LastUpdate: new Date(), CreatedBy: "Natanel Malca" };
-        this.crimes = [...this.crimes, { ...crime }];
-        fs.writeFileSync('tasks.json', JSON.stringify(this.crimes));
-        return this.crimes;
+    createCrime(crime) {
+        const newCrime = { id: this.crimes.length + 1,
+            name: crime.name,
+            desciprtion: crime.desciprtion,
+            color: crime.color,
+            createDate: new Date(),
+            lastUpdate: new Date(),
+            createdBy: crime.createdBy
+        };
+        this.crimes = [...this.crimes, { ...newCrime }];
+        const dataToWrite = this.crimes.map(crime => JSON.stringify(crime)).join('\n');
+        fs.writeFileSync('./src/crimes.json', dataToWrite);
+        return crime;
     }
     deleteCrime(id) {
         const index = this.crimes.findIndex((task) => task.id === id);

@@ -1,8 +1,9 @@
-export interface Crimes {
+export interface Crime {
     id:number;
     color:string;
     name:string;
+    desciprtion:string;
     createDate:Date;
-    LastUpdate:Date;
-    CreatedBy:string;
+    lastUpdate:Date;
+    createdBy:string;
 }

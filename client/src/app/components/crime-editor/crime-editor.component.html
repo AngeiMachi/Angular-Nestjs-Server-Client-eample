@@ -1,1 +1,28 @@
-<p>crime-editor works!</p>
+<div class="crime-editor">
+    <h1>Create New</h1>
+    <form class="crime-editor_form" [formGroup]="crimeForm" (ngSubmit)="onSubmit()">
+        <div class="crime-editor_form_full-width">
+            <mat-form-field class="crime-editor_form_full-width_name" >
+                <mat-label>Name</mat-label>
+                <input matInput [value]="crime?.name" formControlName="name">
+              </mat-form-field>
+              <input [(colorPicker)]="color" [style.background]="color" class="crime-editor_form_full-width_color-picker"/>
+        </div>
+         
+        <mat-form-field class="crime-editor_form_full-width crime-editor_form_description">
+          <mat-label>Tag Description</mat-label>
+          <textarea matInput  [value]="crime?.desciprtion" formControlName="desciprtion"></textarea>
+        </mat-form-field>
+
+        <div class="crime-editor_form_full-width">
+            <button mat-flat-button type="button" (click)="onClose()">Cancel</button>
+            <button mat-flat-button color="primary" type="submit">
+                <mat-icon>save</mat-icon>
+                Save
+            </button> 
+        </div>
+        
+
+    </form>
+</div>
+

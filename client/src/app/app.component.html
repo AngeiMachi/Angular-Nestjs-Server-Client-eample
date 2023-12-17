@@ -1,56 +1,18 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
 
 <main class="main">
-
-  <mat-drawer-container class="example-container" autosize>
-  <div class="content">
-   
-      <mat-drawer #drawer class="example-sidenav" mode="side" position="end">
-      <p>I am navbar !!</p>
-      </mat-drawer>
-      <div class="example-sidenav-content">
-      <button type="button" mat-button color="primary" (click)="drawer.toggle()">
-      click me!!
-      </button>
-      </div>
-    
-    <div class="content_management-tool">
-      <h2>Management Tool </h2>
-      <span class="content_management-tool_views">
-        <button mat-icon-button [disabled]="!isTableView" (click)="isTableView=false" color="primary">
-          <mat-icon >dashboard</mat-icon>
-        </button>
-        <button mat-icon-button [disabled]="isTableView" (click)="isTableView=true" color="primary">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <button mat-icon-button color="primary">
-          <mat-icon  data-content="add_circle">add_circle</mat-icon>
-        </button>
-      </span>
-     
-    </div>
-    
-    
-    @if (isTableView) {
-      <crm-crime-table [crimes]="crimes$ | async"></crm-crime-table>
-    } @else {
-      <crm-crime-list [crimes]="crimes$ | async"></crm-crime-list>
-    }
-   
-  </div>
-</mat-drawer-container>
+  <mat-drawer-container class="main_container">
+    <mat-drawer #sideNav mode="side" opened="false" position="end">
+      <crm-crime-editor [sideNav]="sideNav"></crm-crime-editor>
+    </mat-drawer>
+    <mat-drawer-content class="main_drawer-content">
+      <crm-management-tool [isTableView]="isTableView" (toggleTableView)="isTableView=$event" (createNewCrime)="sideNav.open()"></crm-management-tool>
+      @if (isTableView) {
+        <crm-crime-table [crimes]="crimes$ | async"></crm-crime-table>
+      } @else {
+        <crm-crime-list [crimes]="crimes$ | async"></crm-crime-list>
+      }
+    </mat-drawer-content>
+  </mat-drawer-container>
 </main>
-
-
-
 
 <router-outlet></router-outlet>

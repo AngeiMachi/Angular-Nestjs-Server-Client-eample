@@ -1,7 +1,8 @@
 import { CrimesService } from './crimes.service';
-import { Crimes } from './models';
+import { Crime } from './models';
 export declare class CrimesController {
     private readonly crimesService;
     constructor(crimesService: CrimesService);
-    getTodos(): Crimes[];
+    getCrimes(): Crime[];
+    createCrime(crime: Crime): Crime;
 }

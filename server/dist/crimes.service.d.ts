@@ -1,8 +1,8 @@
-import { Crimes } from './models';
+import { Crime as Crime } from './models';
 export declare class CrimesService {
     private crimes;
     constructor();
-    getCrimes(): Crimes[];
-    createCrime(name: string, color: string): Crimes[];
-    deleteCrime(id: number): Crimes[];
+    getCrimes(): Crime[];
+    createCrime(crime: Crime): Crime;
+    deleteCrime(id: number): Crime[];
 }

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CrimeItemComponent } from '../crime-item/crime-item.component';
-import { Crimes } from '../../models/models';
+import { Crime } from '../../models/models';
 
 @Component({
   selector: 'crm-crime-list',
@@ -10,5 +10,5 @@ import { Crimes } from '../../models/models';
   styleUrl: './crime-list.component.scss'
 })
 export class CrimeListComponent {
-  @Input() crimes: Crimes[] | null = [];
+  @Input() crimes: Crime[] | null = [];
 }

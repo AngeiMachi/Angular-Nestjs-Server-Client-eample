@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
-import { Crimes } from '../models/models';
+import { Crime } from '../models/models';
 
 @Injectable({
   providedIn: 'root'
@@ -11,14 +11,11 @@ export class CrimesService {
   host = 'http://localhost:3000';
  
   constructor(private http: HttpClient) {}
-  getCrimes():Observable<Crimes[]> {
-    return this.http.get<Crimes[]>(`${this.host}/crimes/getCrimes`).pipe(map((res) => res));
+  getCrimes():Observable<Crime[]> {
+    return this.http.get<Crime[]>(`${this.host}/crimes/getCrimes`).pipe(map((res) => res));
   }
-  addCrimes(todo: string) {
-    return this.http.post(`${this.host}/crimes`, {
-      name: todo,
-      completed: false,
-    });
+  createCrime(crime: Crime) {
+    return this.http.post(`${this.host}/crimes/createCrime`, crime);
   }
   deleteCrimes(id: number) {
     return this.http.delete(`${this.host}/crimes/${id}`);

@@ -4,19 +4,23 @@ import { RouterOutlet } from '@angular/router';
 import { CrimeTableComponent } from './components/crime-table/crime-table.component';
 import { Store } from '@ngrx/store';
 import { CrimesState, selectCrimesList } from './state/crimes/crimes.selector';
-import { LoadCrimes } from './state/crimes/crimes.actions';
+import { loadCrimes } from './state/crimes/crimes.actions';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
-import { MatButtonModule } from '@angular/material/button';
 import { CrimeListComponent } from './components/crime-list/crime-list.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { CrimeEditorComponent } from './components/crime-editor/crime-editor.component';
+import { ManagementToolComponent } from './components/management-tool/management-tool.component';
+import { MatInput, MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    MatInputModule, 
+    ManagementToolComponent,
+    CrimeEditorComponent,
     MatSidenavModule,
-    MatButtonModule,
     MatIconModule,
     CrimeListComponent,
     CrimeTableComponent,
@@ -33,7 +37,6 @@ export class AppComponent implements OnInit{
   constructor(private store: Store<CrimesState>) {}
   
   ngOnInit() {
-    this.store.dispatch(LoadCrimes()); 
-    
+    this.store.dispatch(loadCrimes());  
   }
 }

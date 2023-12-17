@@ -1,12 +1,72 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { Crime } from '../../models/models';
+import { ColorPickerModule } from 'ngx-color-picker';
+import { MatDrawer } from '@angular/material/sidenav';
+import { Store } from '@ngrx/store';
+import { CrimesState } from '../../state/crimes/crimes.selector';
+import { createCrime } from '../../state/crimes/crimes.actions';
 
 @Component({
   selector: 'crm-crime-editor',
   standalone: true,
-  imports: [],
+  imports: [FormsModule,
+            ReactiveFormsModule,
+            MatFormFieldModule,
+            MatInputModule,
+            MatButtonModule,
+            MatIconModule,
+            ColorPickerModule
+          ],
   templateUrl: './crime-editor.component.html',
   styleUrl: './crime-editor.component.scss'
 })
-export class CrimeEditorComponent {
+export class CrimeEditorComponent implements OnInit{
+  @Input() crime!:Crime;
+  @Input() sideNav:MatDrawer | null= null;
+  color:string='black';
+
+  crimeForm: FormGroup = new FormGroup({});
+  
+  constructor(private fb: FormBuilder,private store: Store<CrimesState>){}
+  
+  ngOnInit() {
+    this.crimeForm = this.fb.group({
+      name: ['', Validators.required],
+      desciprtion: ['', [Validators.required]],
+    });
+  }
+
+  onSubmit() {
+    if (this.crimeForm.valid) {
+      const crime:Crime = {
+          id:-1,
+          name: this.crimeForm.get('name')?.value,
+          desciprtion: this.crimeForm.get('desciprtion')?.value,
+          color:this.color,
+          createDate: new Date(),
+          lastUpdate: new Date(),
+          createdBy: 'admin',
+      }
+      this.store.dispatch(createCrime({crime}));
+      this.onClose();
+    }
+    
+    
+  }
+  onClose(){
+    this.crimeForm.reset();
+    Object.keys(this.crimeForm.controls).forEach(key => {
+      const control = this.crimeForm.get(key);
+      control?.markAsPristine();
+      control?.markAsUntouched();
+      control?.clearValidators();
+    });
+    this.sideNav?.close();
+  }
 
 }

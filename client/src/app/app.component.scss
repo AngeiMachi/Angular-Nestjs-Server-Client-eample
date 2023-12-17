@@ -1,26 +1,31 @@
-
+.main {
+    height:100%;
+    &_container {
+        height: 100%;
+    }
+    &_drawer-content {
+        height: 100%;
+    }
+}
+.matdrawer-container {
+    &_sidenav {
+        width: 400px;
+        height: 200px;
+        margin-right: 10px!important;
+        border: 1px solid #555;
+    }
+}    
+mat-drawer-content {
+    margin-right: 0px !important;
+    flex: 1 1 auto;
+}
+mat-sidenav {
+    flex: 0 1 auto;
+}
 .content {
     display: flex;
     flex-direction: column;
     
 
-    &_management-tool {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        &_views {
-            display: flex;
-            align-items: center;
-            justify-content: end;
-            width: 20%;
-            
-            // mat-icon[data-content='add_circle'] {
-            //     font-size: 32px;
-            //     width:32px;
-            //     height: 32px;
-            // }
-        }
-        
-    }    
+    
 }

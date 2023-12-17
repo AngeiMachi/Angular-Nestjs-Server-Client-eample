@@ -8,6 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CrimesController = void 0;
 const common_1 = require("@nestjs/common");
@@ -16,9 +19,17 @@ let CrimesController = class CrimesController {
     constructor(crimesService) {
         this.crimesService = crimesService;
     }
-    getTodos() {
+    getCrimes() {
         try {
             return this.crimesService.getCrimes();
+        }
+        catch (error) {
+            throw new common_1.HttpException(error.message, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    createCrime(crime) {
+        try {
+            return this.crimesService.createCrime(crime);
         }
         catch (error) {
             throw new common_1.HttpException(error.message, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
@@ -31,7 +42,14 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Array)
-], CrimesController.prototype, "getTodos", null);
+], CrimesController.prototype, "getCrimes", null);
+__decorate([
+    (0, common_1.Post)('createCrime'),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Object)
+], CrimesController.prototype, "createCrime", null);
 exports.CrimesController = CrimesController = __decorate([
     (0, common_1.Controller)('crimes'),
     __metadata("design:paramtypes", [crimes_service_1.CrimesService])
